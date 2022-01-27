@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment BankManager", "Assignment BankManager\Assignment BankManager.csproj", "{872AE97D-2309-4E8E-A410-62502FFB9D3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment_Bookmark", "Assignment_Bookmark\Assignment_Bookmark.csproj", "{E587D0FE-FE5C-4954-AF12-E9E8DF95DE83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmentMeetlat", "AssignmentMeetlat\AssignmentMeetlat.csproj", "{3234459A-BE74-4CF9-995A-6016C92D3B91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OefeningFiguren", "OefeningFiguren\OefeningFiguren.csproj", "{5A3C94B9-5F8C-4D85-A6AB-FDF880EDDBC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaTime", "PizzaTime\PizzaTime.csproj", "{DFA3967D-0D2B-4D6B-8811-5056B52C707B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignent_Speelkaarten", "Assignent_Speelkaarten\Assignent_Speelkaarten.csproj", "{D4E09EAE-EA3B-4855-9C41-20DABF628361}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{872AE97D-2309-4E8E-A410-62502FFB9D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872AE97D-2309-4E8E-A410-62502FFB9D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872AE97D-2309-4E8E-A410-62502FFB9D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872AE97D-2309-4E8E-A410-62502FFB9D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E587D0FE-FE5C-4954-AF12-E9E8DF95DE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E587D0FE-FE5C-4954-AF12-E9E8DF95DE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E587D0FE-FE5C-4954-AF12-E9E8DF95DE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E587D0FE-FE5C-4954-AF12-E9E8DF95DE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3234459A-BE74-4CF9-995A-6016C92D3B91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3234459A-BE74-4CF9-995A-6016C92D3B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3234459A-BE74-4CF9-995A-6016C92D3B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3234459A-BE74-4CF9-995A-6016C92D3B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3C94B9-5F8C-4D85-A6AB-FDF880EDDBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3C94B9-5F8C-4D85-A6AB-FDF880EDDBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3C94B9-5F8C-4D85-A6AB-FDF880EDDBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3C94B9-5F8C-4D85-A6AB-FDF880EDDBC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA3967D-0D2B-4D6B-8811-5056B52C707B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA3967D-0D2B-4D6B-8811-5056B52C707B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA3967D-0D2B-4D6B-8811-5056B52C707B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA3967D-0D2B-4D6B-8811-5056B52C707B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E09EAE-EA3B-4855-9C41-20DABF628361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E09EAE-EA3B-4855-9C41-20DABF628361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E09EAE-EA3B-4855-9C41-20DABF628361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E09EAE-EA3B-4855-9C41-20DABF628361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7812027-205F-48ED-8732-7A4C4BE50151}
+	EndGlobalSection
+EndGlobal
