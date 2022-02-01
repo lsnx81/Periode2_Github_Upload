@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PizzaTime
+﻿namespace PizzaTime
 {
     internal class Pizza
     {
@@ -12,12 +6,19 @@ namespace PizzaTime
         private int diameter;
         private double price;
 
+        public Pizza(string toppings, int diameter, double price)
+        {
+            Toppings = toppings;
+            Diameter = diameter;
+            Price = price;
+        }
+
         /// <summary>
         /// Topping Hetgeen wat op pizza ligt.
         /// </summary>
         /// <remarks>Moet een geldige waarde hebben. Foute Waarde of NULL is niet aanvaard.</remarks>
         /// <exception cref="ArgumentException"> laat Null or Empty niet toe. </exception>
-        
+
         public string Toppings
         {
             get => toppings;
@@ -30,6 +31,7 @@ namespace PizzaTime
                 toppings = value;
             }
         }
+
         /// <summary>
         /// Diameter bepaalt de grootte van de pizza.
         /// </summary>
@@ -44,26 +46,29 @@ namespace PizzaTime
                 {
                     throw new ArgumentException($"Diameter moet tussen 10 en 30 cm zijn. Uw waarden {value} is ongeldig", nameof(Diameter));
                 }
+
                 diameter = value;
             }
         }
+
         /// <summary>
         /// Prijs is de prijs in euro voor de pizza
         /// </summary>
         /// <remarks>Prijs kan niet negatief zijn</remarks>
         /// <exception cref="ArgumentException"> Prijs kan niet negatief zijn </exception>
-        public double Price 
-        { 
+        public double Price
+        {
             get => price;
-            set 
-            { 
-                if(value <0)
+            set
+            {
+                if (value < 0)
                 {
-                    throw new ArgumentException($"Prijs kan niet negatief zijn",nameof(Price));
+                    throw new ArgumentException($"Prijs kan niet negatief zijn", nameof(Price));
                 }
-                price = value; 
-            } 
+                price = value;
+            }
         }
+
         public override string ToString()
         {
             return $"Topping:{Toppings} Diameter:{Diameter} Prijs:{Price}";
