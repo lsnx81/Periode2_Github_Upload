@@ -1,27 +1,33 @@
 ﻿namespace AssignmentMeetlat
 {
-    class Meetlat
+    internal class Meetlat
     {
-        private readonly decimal _lengte;
-        public Meetlat(decimal beginLengte)
+        private readonly double _lengte;
+
+        public Meetlat(double beginLengte)
         {
             _lengte = beginLengte;
         }
 
-        public decimal BeginLengte
+        // Only the public Property (propfull) can access its private value -> Security
+        public double BeginLengte
         {
-            get => _lengte;
+            get
+            {
+                // Check if user is logged in
 
+                // Check if user is authorized
+
+                // Check if value is valid
+                return _lengte;
+            }
         }
 
-        public decimal LengteInM => _lengte;
+        public double LengteInCm => BeginLengte * 100;
 
-        public decimal LengteInCm => _lengte * 100;
+        public double LengteInKm => BeginLengte / 1000;
 
-        public decimal LengteInKm => _lengte / 1000;
+        public double LengteInVoet => BeginLengte * 3.2808;
 
-        public decimal LengteInVoet => _lengte * 3.2808M;
     }
-
-
 }
