@@ -1,42 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignent_Speelkaarten
+﻿namespace Assignent_Speelkaarten
 {
     internal class Sofa
     {
-
-        public Sofa(string naam, string serienummer, Kleur kleur=Kleur.Rood, Grondstof grondstof=Grondstof.Leder)
+        public Sofa(string naam, string serienummer, Kleur kleur = Kleur.Rood, Grondstof grondstof = Grondstof.Leder)
         {
             Naam = naam;
             Serienummer = serienummer;
             Kleur = kleur;
             Grondstof = grondstof;
-
         }
 
         public Sofa(
-            double gewichtInKilo 
-            ,double lengte
-            ,double breedte
-            ,double hoogte
-            ,double zitDiepte 
-            ,string naam
-            ,string serienummer
+            double gewichtInKilo
+            , double lengte
+            , double breedte
+            , double hoogte
+            , double zitDiepte
+            , string naam
+            , string serienummer
             , Kleur kleur = Kleur.Rood
             , Grondstof grondstof = Grondstof.Sky
-            ): this(naam, serienummer, kleur,grondstof)
+            ) : this(naam, serienummer, kleur, grondstof)
         {
             GewichtInKilo = gewichtInKilo;
-            Lengte = lengte;    
+            Lengte = lengte;
             Breedte = breedte;
             Hoogte = hoogte;
             ZitDiepte = zitDiepte;
-            
         }
+
         public double GewichtInKilo { get; set; }
         public double Lengte { get; set; }
         public double Breedte { get; set; }
@@ -47,11 +39,7 @@ namespace Assignent_Speelkaarten
 
         public Grondstof Grondstof { get; set; }
 
-        public Kleur Kleur { get; set; } 
-
-
-
-
+        public Kleur Kleur { get; set; }
     }
 
     public enum Kleur
@@ -61,17 +49,16 @@ namespace Assignent_Speelkaarten
         Blauw,
         Geel,
         Zwart,
-        Wit 
+        Wit
     }
 
     public enum Grondstof
     {
-        None=0,
+        None = 0,
         Stoffen,
         Leder,
         Nylon,
         Sky,
         Andere
-
     }
 }
