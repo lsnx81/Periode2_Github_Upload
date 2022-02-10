@@ -3,6 +3,7 @@
     public enum AccountStatus
     {
         Geldig = 0,
-        Geblokkeerd
+        Geblokkeerd,
+        
     }
 }

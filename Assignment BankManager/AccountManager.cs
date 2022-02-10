@@ -4,15 +4,33 @@
     {
         HashSet<Account> accounts = new HashSet<Account>();
 
+
+
         public Account CreateAccountFor(string accountHolder, decimal initialDeposit)
         {
+            if (string.IsNullOrEmpty(accountHolder))
+            {
+                throw new ArgumentException($"'{nameof(accountHolder)}' cannot be null or empty.", nameof(accountHolder));
+            }
+
+            if (initialDeposit < 0)
+            {
+                throw new ArgumentException("Initial Deposit must be Positive", nameof(initialDeposit));
+            }
             var account = accounts.FirstOrDefault(a => string.Equals(a.Naam, accountHolder));
-            if( account is null)
-                account=new Account(accountHolder);
+
+
+            if (account is null)
+                account = new Account(accountHolder);
 
             accounts.Add(account);
             account.PayInFunds(initialDeposit);
             return account;
+        }
+
+        internal List<Account> Accounts()
+        {
+            return new List<Account>(accounts);
         }
 
         public bool TryWithDrawFunds(string rekeningnummer, decimal withdrawAmount, out decimal amountPayedOut)
@@ -45,6 +63,14 @@
                 return false;
             }
         }
+
+        internal bool TryDeposit(Account naarRekening, decimal effectiefGeboekt)
+        {
+            return naarRekening.PayInFunds(effectiefGeboekt);
+
+
+        }
+
         public int WithDrawFunds(string accountNumber, int amount)
         {
             if (TryWithDrawFunds(accountNumber, amount, out var aivalableForWithdraw))
@@ -62,5 +88,6 @@
             }
             account.Status = newState;
         }
+
     }
 }
