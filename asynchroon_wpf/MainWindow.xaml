@@ -1,0 +1,30 @@
+﻿<Window x:Class="asynchroon_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:asynchroon_wpf"
+        xmlns:Views="clr-namespace:asynchroon_wpf.ViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Command="{Binding ButtonOneCommand}"
+                 Content="Freeze" Height="50" Width="50"
+                 />
+                <Button Command="{Binding ButtonOneCommand10, IsAsync=True}" 
+                 Content="Ansync" Height="50" Width="50"
+                 />
+                <Button Command="{Binding ButtonOneCommand15, IsAsync=True}" 
+                 Content="Parallel" Height="50" Width="50"
+                 />
+            </StackPanel>
+            <ListBox ItemsSource="{Binding Melding}">
+
+            </ListBox>
+        </StackPanel>
+
+    </Grid>
+</Window>

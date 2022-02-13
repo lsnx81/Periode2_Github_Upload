@@ -18,9 +18,9 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Achternaam" Grid.Row="0" Grid.Column="0" Content="Achternaam"/>
-        <Label x:Name="Voornaam" Grid.Row="1" Grid.Column="0" Content="Voornaam"/>
-        <Label x:Name="Verdiensten" Grid.Row="2" Grid.Column="0" Content="Verdiensten"/>
+        <Label x:Name="Achternaam" Grid.Row="0" Grid.Column="0" Content="Achternaam  :" Margin="40,0,0,0"/>
+        <Label x:Name="Voornaam" Grid.Row="1" Grid.Column="0" Content="Voornaam     :" Margin="40,0,0,0"/>
+        <Label x:Name="Verdiensten" Grid.Row="2" Grid.Column="0" Content="Verdiensten   :" Margin="40,0,0,0"/>
         <TextBox x:Name="inputAchternaam" Grid.Row="0" Grid.Column="1" Margin="5,5,5,5" />
         <TextBox x:Name="inputVoornaam" Grid.Row="1" Grid.Column="1" Margin="5,5,5,5"/>
         <TextBox x:Name="inputVerdiensten" Grid.Row="2" Grid.Column="1" InputScope="CurrencyAmount" Margin="5,5,5,5" />
