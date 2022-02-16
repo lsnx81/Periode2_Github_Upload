@@ -31,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BerekenOmtrek", "BerekenOmt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Werknemer", "Werknemer\Werknemer.csproj", "{AA45F282-5B37-4F4B-93ED-B94B097AA645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rekenmachine", "Rekenmachine\Rekenmachine.csproj", "{E4D0D6E1-5776-469A-BA2F-54E5D4EA68BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rekenmachine", "Rekenmachine\Rekenmachine.csproj", "{E4D0D6E1-5776-469A-BA2F-54E5D4EA68BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asynchroon_wpf", "asynchroon_wpf\asynchroon_wpf.csproj", "{6925F191-0EA5-4467-B98F-4A0D7130332E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "asynchroon_wpf", "asynchroon_wpf\asynchroon_wpf.csproj", "{6925F191-0EA5-4467-B98F-4A0D7130332E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex", "Regex\Regex.csproj", "{C957F2DD-31D4-4575-B01A-A9119BCA76E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regex", "Regex\Regex.csproj", "{C957F2DD-31D4-4575-B01A-A9119BCA76E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid_FileExplorer", "DataGrid_FileExplorer\DataGrid_FileExplorer.csproj", "{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +105,10 @@ Global
 		{C957F2DD-31D4-4575-B01A-A9119BCA76E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C957F2DD-31D4-4575-B01A-A9119BCA76E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C957F2DD-31D4-4575-B01A-A9119BCA76E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{E4D0D6E1-5776-469A-BA2F-54E5D4EA68BD} = {8756B75D-8658-471A-88C8-97DE40182774}
 		{6925F191-0EA5-4467-B98F-4A0D7130332E} = {8756B75D-8658-471A-88C8-97DE40182774}
 		{C957F2DD-31D4-4575-B01A-A9119BCA76E7} = {8756B75D-8658-471A-88C8-97DE40182774}
+		{C92D9AFC-78B6-4EA1-89F4-8B9B96E44088} = {8756B75D-8658-471A-88C8-97DE40182774}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7812027-205F-48ED-8732-7A4C4BE50151}

@@ -119,6 +119,7 @@ while (true)
 
 Account SelectAccount(string standaardTekst)
 {
+    int keuzeRekening;
     Console.WriteLine(standaardTekst);
     List<Account> list = accountManager.Accounts();
     for (int i = 0; i < list.Count; i++)
@@ -126,7 +127,25 @@ Account SelectAccount(string standaardTekst)
         Console.WriteLine($"{i + 1}: {list[i]}");
 
     }
-    Console.WriteLine("kies rekening:");
-    var keuzeRekening = int.Parse(Console.ReadLine());
+
+
+    do
+    {
+        Console.WriteLine("kies rekening of geef ESC in om terug te keren:");
+    } while (!(int.TryParse(Console.ReadLine(), out keuzeRekening) && keuzeRekening > 0 && keuzeRekening <= list.Count) && Console.ReadLine() != "ESC");
+
     return list[keuzeRekening - 1];
+    
+
+    //if (int.TryParse(Console.ReadLine(), out var keuzeRekening) && keuzeRekening>0 && keuzeRekening <=list.Count)
+    //{
+    //    return list[keuzeRekening - 1];
+    //}
+    //else
+    //{
+    //    Console.WriteLine(("this is not a valid choice.  Choose an existing accountnumber"));
+
+    //    return SelectAccount(standaardTekst);
+
+    //}
 }

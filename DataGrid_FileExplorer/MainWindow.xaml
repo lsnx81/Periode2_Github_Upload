@@ -1,0 +1,72 @@
+﻿<Window x:Class="DataGrid_FileExplorer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataGrid_FileExplorer" 
+        xmlns:model="clr-namespace:DataGrid_FileExplorer.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=model:MainWindowViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background="Beige">
+   
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="15,0,0,5">
+            <ComboBox  x:Name="cbStoreSelector" Width="300" SelectedItem="{Binding SelectedStore, Mode=OneWayToSource}" ItemsSource="{Binding RegisteredStores, Mode=OneTime}"/>
+            <TextBlock Text="{Binding Path=SelectedItem.Details, Mode=OneWay,  ElementName=cbStoreSelector}" TextWrapping="Wrap" Margin="20,0,0,0" />
+
+        </StackPanel>
+        <DataGrid x:Name="GrdSelectedStore" Grid.Row="1" Margin="15 0 15 15" AutoGenerateColumns="False"
+                  ItemsSource="{Binding Path=SelectedItem.LijstSale, ElementName=cbStoreSelector}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding StoreId, Mode=OneWay}" IsReadOnly="True"  Header="StoreID" />
+                <DataGridTextColumn Binding="{Binding OrdNum, Mode=OneWay}" IsReadOnly="True"  Header="Order Nummer" />
+                <DataGridTextColumn Binding="{Binding OrdDatum, Mode=OneWay}" IsReadOnly="True" Header="Datum" />
+                <DataGridTextColumn Binding="{Binding Quantity}" Header="Qty" />
+                <DataGridTextColumn Binding="{Binding PayTerms, Mode=OneWay}" IsReadOnly="True" Header="PayTerms" />
+                <DataGridComboBoxColumn Header="Beschikbare Boeken" SelectedValueBinding="{Binding Path=Book}">
+                    <DataGridComboBoxColumn.ElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AvailableBooks, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+                        </Style>
+                    </DataGridComboBoxColumn.ElementStyle>
+                    <DataGridComboBoxColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AvailableBooks, RelativeSource={RelativeSource AncestorType={x:Type Window}}}" />
+                        </Style>
+                    </DataGridComboBoxColumn.EditingElementStyle>
+                </DataGridComboBoxColumn>
+
+                <DataGridTextColumn Binding="{Binding TussenTotaal, Mode=OneWay}" Header="TussenTotaal" IsReadOnly="True" />
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Grid Grid.Row="2" Margin="15,0,15,15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Ordernummer"/>
+            <TextBox Grid.Column="1" Text="{Binding Ordernummer, Mode=TwoWay}"/>
+            <Label Grid.Row="1" Content="Quantity"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, Mode=TwoWay}"/>
+            <Label Grid.Row="2" Content="PaymentTerms"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding PaymentTerms, Mode=TwoWay}"/>
+            <Label Grid.Row="3" Content="Title"/>
+            <ComboBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding AvailableBooks}" SelectedItem="{Binding SelectedBook, Mode=TwoWay}"/>
+        </Grid>
+        <Button Grid.Row="3" Content="Toevoegen" Command="{Binding AddBook}" Margin="15 0 15 15"/>
+    </Grid>
+</Window>
